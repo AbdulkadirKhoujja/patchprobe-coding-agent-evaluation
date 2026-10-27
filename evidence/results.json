@@ -1,0 +1,52 @@
+{
+  "schema": "synthetic-agent-evaluation-v1",
+  "cases": [
+    {
+      "implementation": "candidate",
+      "suite": "public",
+      "exit_code": 0,
+      "tests_run": 4,
+      "passed": true,
+      "failure_summary": null,
+      "failed_cases": []
+    },
+    {
+      "implementation": "candidate",
+      "suite": "holdout",
+      "exit_code": 1,
+      "tests_run": 12,
+      "passed": false,
+      "failure_summary": "failures=8, errors=2",
+      "failed_cases": [
+        "ERROR: test_missing_required_field_rejected (test_holdout.HoldoutTests.test_missing_required_field_rejected)",
+        "ERROR: test_non_dict_rejected (test_holdout.HoldoutTests.test_non_dict_rejected)",
+        "FAIL: test_blank_tenant_rejected (test_holdout.HoldoutTests.test_blank_tenant_rejected)",
+        "FAIL: test_boolean_timestamp_rejected (test_holdout.HoldoutTests.test_boolean_timestamp_rejected)",
+        "FAIL: test_equal_timestamp_uses_later_occurrence (test_holdout.HoldoutTests.test_equal_timestamp_uses_later_occurrence)",
+        "FAIL: test_first_seen_key_order_stable_after_updates (test_holdout.HoldoutTests.test_first_seen_key_order_stable_after_updates)",
+        "FAIL: test_negative_timestamp_rejected (test_holdout.HoldoutTests.test_negative_timestamp_rejected)",
+        "FAIL: test_newest_update_wins (test_holdout.HoldoutTests.test_newest_update_wins)",
+        "FAIL: test_payload_is_copied (test_holdout.HoldoutTests.test_payload_is_copied)",
+        "FAIL: test_same_id_different_tenants_must_survive (test_holdout.HoldoutTests.test_same_id_different_tenants_must_survive)"
+      ]
+    },
+    {
+      "implementation": "reference",
+      "suite": "public",
+      "exit_code": 0,
+      "tests_run": 4,
+      "passed": true,
+      "failure_summary": null,
+      "failed_cases": []
+    },
+    {
+      "implementation": "reference",
+      "suite": "holdout",
+      "exit_code": 0,
+      "tests_run": 12,
+      "passed": true,
+      "failure_summary": null,
+      "failed_cases": []
+    }
+  ]
+}
