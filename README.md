@@ -47,4 +47,4 @@ The script executes public and held-out tests separately against **both** implem
 - This is original demonstration material only, not a representation of paid client work.
 ## Cloudflare Pages deployment
 
-Connect this public GitHub repository in Cloudflare Workers & Pages → Create project → Pages → Connect to Git. Select `main`, choose **no framework**, leave the build command empty, and set build output directory to `/` (the repository root). `index.html` is self-contained; no Node.js build, API keys or environment variables are needed.
+Connect this public GitHub repository in Cloudflare Workers & Pages → Create project → Pages → Connect to Git. Select `main`, choose **no framework**, set the build command to `exit 0`, and set build output directory to `.` (the repository root). `index.html` is self-contained; no Node.js build, API keys or environment variables are needed.
